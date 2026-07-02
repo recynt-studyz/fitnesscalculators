@@ -105,7 +105,7 @@ export default function SleepPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">The science of sleep cycles</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Sleep is not a single continuous state — it is a series of 90-minute cycles, each containing stages of light sleep, deep sleep, and REM sleep. Waking up mid-cycle (especially during deep sleep) triggers sleep inertia, that groggy feeling even after a full night of sleep. By timing your wake-up to the end of a complete cycle, you wake naturally during light sleep and feel more alert. Our sleep calculator calculates exactly when to go to bed or set your alarm to align with these natural sleep rhythms.
+              Sleep is not a single continuous state — it is a series of 90-minute cycles, each containing stages of light sleep, deep sleep, and REM sleep. Waking up mid-cycle (especially during deep sleep) triggers sleep inertia, that groggy feeling even after a full night of sleep. By timing your wake-up to the end of a complete cycle, you wake naturally during light sleep and feel more alert. Our sleep calculator calculates exactly when to go to bed or set your alarm to align with these natural sleep rhythms. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

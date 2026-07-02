@@ -105,7 +105,7 @@ export default function WaterIntakePage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Why proper hydration matters for fitness</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Water is involved in nearly every bodily process — digestion, temperature regulation, joint lubrication, nutrient transport, and waste removal. Even mild dehydration (1–2% of body weight) can impair physical and cognitive performance. Staying properly hydrated supports better workouts, faster recovery, clearer thinking, and healthier skin. Use our water intake calculator to find your personalized daily target and the suggested schedule to spread your intake throughout the day.
+              Water is involved in nearly every bodily process — digestion, temperature regulation, joint lubrication, nutrient transport, and waste removal. Even mild dehydration (1–2% of body weight) can impair physical and cognitive performance. Staying properly hydrated supports better workouts, faster recovery, clearer thinking, and healthier skin. Use our water intake calculator to find your personalized daily target and the suggested schedule to spread your intake throughout the day. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

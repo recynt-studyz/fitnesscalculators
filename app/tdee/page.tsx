@@ -105,7 +105,7 @@ export default function TDEEPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">TDEE: the starting point for every nutrition goal</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Your TDEE is the most important number in nutrition planning. Eat at your TDEE and your weight stays stable. Eat below it and you lose weight. Eat above it and you gain weight. The accuracy of your TDEE determines how well your plan works — which is why using a validated formula like Mifflin-St Jeor and being honest about your activity level is critical. Start with our estimate, track your results for 2–3 weeks, and adjust as needed.
+              Your TDEE is the most important number in nutrition planning. Eat at your TDEE and your weight stays stable. Eat below it and you lose weight. Eat above it and you gain weight. The accuracy of your TDEE determines how well your plan works — which is why using a validated formula like Mifflin-St Jeor and being honest about your activity level is critical. Start with our estimate, track your results for 2–3 weeks, and adjust as needed. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

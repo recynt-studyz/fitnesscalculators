@@ -105,7 +105,7 @@ export default function IdealWeightPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Understanding ideal weight estimates</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Ideal weight formulas were developed to provide general guidance on healthy weight ranges based on height and sex. These estimates vary by a few pounds across formulas — which is normal and expected. The consensus range (the spread across all four formulas) gives you a practical target zone. Remember that a number on the scale is just one data point. Body composition, fitness level, and how you feel are equally important indicators of health.
+              Ideal weight formulas were developed to provide general guidance on healthy weight ranges based on height and sex. These estimates vary by a few pounds across formulas — which is normal and expected. The consensus range (the spread across all four formulas) gives you a practical target zone. Remember that a number on the scale is just one data point. Body composition, fitness level, and how you feel are equally important indicators of health. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

@@ -105,7 +105,7 @@ export default function BMRPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Why knowing your BMR matters</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Your basal metabolic rate is the foundation of calorie planning. Without knowing how many calories you burn at rest, you cannot accurately set a deficit or surplus for your goals. The Mifflin-St Jeor equation — used by this BMR calculator — is considered the most accurate for the general population. Multiply your BMR by your activity factor to get your TDEE, then adjust up or down to reach your weight goal.
+              Your basal metabolic rate is the foundation of calorie planning. Without knowing how many calories you burn at rest, you cannot accurately set a deficit or surplus for your goals. The Mifflin-St Jeor equation — used by this BMR calculator — is considered the most accurate for the general population. Multiply your BMR by your activity factor to get your TDEE, then adjust up or down to reach your weight goal. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

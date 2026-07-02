@@ -105,7 +105,7 @@ export default function OvulationPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">How the ovulation calculator works</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Our ovulation calculator predicts your fertile window based on the timing of ovulation relative to your cycle length. Ovulation typically occurs 14 days before your next expected period, so the calculation is: ovulation date = LMP date + (cycle length − 14). The fertile window spans 5 days before ovulation through the day of ovulation. The color-coded calendar makes it easy to visualize your next few cycles at a glance.
+              Our ovulation calculator predicts your fertile window based on the timing of ovulation relative to your cycle length. Ovulation typically occurs 14 days before your next expected period, so the calculation is: ovulation date = LMP date + (cycle length − 14). The fertile window spans 5 days before ovulation through the day of ovulation. The color-coded calendar makes it easy to visualize your next few cycles at a glance. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

@@ -105,7 +105,7 @@ export default function BodyFatPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">How the US Navy Body Fat Formula works</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              The US Navy circumference method estimates body fat percentage from simple body measurements. For men, it uses height, waist, and neck circumferences. For women, it adds hip circumference. The formula applies logarithmic math to these measurements and has been validated against more expensive methods like hydrostatic weighing. While not as precise as a DEXA scan, it gives a practical estimate you can track over time at home.
+              The US Navy circumference method estimates body fat percentage from simple body measurements. For men, it uses height, waist, and neck circumferences. For women, it adds hip circumference. The formula applies logarithmic math to these measurements and has been validated against more expensive methods like hydrostatic weighing. While not as precise as a DEXA scan, it gives a practical estimate you can track over time at home. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

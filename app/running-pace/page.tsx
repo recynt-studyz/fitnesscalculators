@@ -105,7 +105,7 @@ export default function RunningPacePage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Plan your race with a running pace calculator</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Whether you are training for your first 5K or targeting a marathon PR, our running pace calculator helps you plan every race and training run. Use Pace mode to analyze past runs, Finish Time mode to set race goals, or Distance mode to plan time-based workouts. The race prediction table gives instant estimates for 5K, 10K, half marathon, and marathon based on your current pace — great for setting realistic race goals.
+              Whether you are training for your first 5K or targeting a marathon PR, our running pace calculator helps you plan every race and training run. Use Pace mode to analyze past runs, Finish Time mode to set race goals, or Distance mode to plan time-based workouts. The race prediction table gives instant estimates for 5K, 10K, half marathon, and marathon based on your current pace — great for setting realistic race goals. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

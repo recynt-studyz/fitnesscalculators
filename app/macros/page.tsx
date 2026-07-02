@@ -105,7 +105,7 @@ export default function MacrosPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Why track macros instead of just calories?</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Tracking macros gives you more control over your body composition than counting calories alone. By ensuring adequate protein intake, you preserve muscle while losing fat. Adjusting carbs helps manage energy levels and cravings. Setting fat targets supports hormonal health. The right macro balance depends on your goals — our macro calculator personalizes your targets based on your stats and chosen diet style.
+              Tracking macros gives you more control over your body composition than counting calories alone. By ensuring adequate protein intake, you preserve muscle while losing fat. Adjusting carbs helps manage energy levels and cravings. Setting fat targets supports hormonal health. The right macro balance depends on your goals — our macro calculator personalizes your targets based on your stats and chosen diet style. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

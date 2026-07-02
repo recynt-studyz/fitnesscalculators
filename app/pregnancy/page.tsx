@@ -105,7 +105,7 @@ export default function PregnancyPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">Understanding your pregnancy due date</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              A pregnancy due date is an estimate — not a guarantee of when your baby will arrive. Most babies are born between 38 and 42 weeks of pregnancy. Our pregnancy calculator uses Naegele&apos;s rule adjusted for your cycle length to give you the most accurate estimate possible from home. For an official due date, your healthcare provider will use a combination of your LMP and early ultrasound measurements.
+              A pregnancy due date is an estimate — not a guarantee of when your baby will arrive. Most babies are born between 38 and 42 weeks of pregnancy. Our pregnancy calculator uses Naegele&apos;s rule adjusted for your cycle length to give you the most accurate estimate possible from home. For an official due date, your healthcare provider will use a combination of your LMP and early ultrasound measurements. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>

@@ -105,7 +105,7 @@ export default function OneRepMaxPage() {
           <div className="rounded-2xl bg-teal-50 dark:bg-teal-950/30 border border-teal-100 dark:border-teal-900/50 px-6 py-5 mb-10">
             <h2 className="text-base font-bold text-teal-900 dark:text-teal-300 mb-2">How to use your 1RM for smarter training</h2>
             <p className="text-sm text-teal-800 dark:text-teal-400 leading-relaxed">
-              Knowing your one rep max transforms your training from guesswork into a systematic program. Once you have your 1RM, you can prescribe exact weights for every working set based on the percentage required for your goal — strength, hypertrophy, or power. The percentage table in our one rep max calculator shows you exactly what weight to use at each training intensity zone, making it easy to program your workouts with precision.
+              Knowing your one rep max transforms your training from guesswork into a systematic program. Once you have your 1RM, you can prescribe exact weights for every working set based on the percentage required for your goal — strength, hypertrophy, or power. The percentage table in our one rep max calculator shows you exactly what weight to use at each training intensity zone, making it easy to program your workouts with precision. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
           <div className="pb-10"><FAQ questions={faqs} /></div>
