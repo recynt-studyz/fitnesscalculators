@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 
 const tools = [
   { href: '/', label: 'BMI' },
+  { href: '/bmr', label: 'BMR' },
+  { href: '/tdee', label: 'TDEE' },
   { href: '/calories', label: 'Calories' },
   { href: '/macros', label: 'Macros' },
   { href: '/body-fat', label: 'Body Fat' },
@@ -16,8 +18,6 @@ const tools = [
   { href: '/ovulation', label: 'Ovulation' },
   { href: '/water-intake', label: 'Water Intake' },
   { href: '/sleep', label: 'Sleep' },
-  { href: '/bmr', label: 'BMR' },
-  { href: '/tdee', label: 'TDEE' },
 ]
 
 export default function CalcNav() {
