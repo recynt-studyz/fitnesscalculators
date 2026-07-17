@@ -108,6 +108,63 @@ export default function PregnancyPage() {
               A pregnancy due date is an estimate — not a guarantee of when your baby will arrive. Most babies are born between 38 and 42 weeks of pregnancy. Our pregnancy calculator uses Naegele&apos;s rule adjusted for your cycle length to give you the most accurate estimate possible from home. For an official due date, your healthcare provider will use a combination of your LMP and early ultrasound measurements. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Pregnancy Due Date Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>A pregnancy due date is typically calculated using <strong>Naegele&apos;s Rule</strong>, formulated by German obstetrician Franz Karl Naegele in the early 19th century. The formula adds 280 days (40 weeks) to the first day of the last menstrual period (LMP). In practice: take the LMP date, add one year, subtract three months, and add seven days.</p>
+                <p>The 40-week count starts from the LMP — not from conception — because conception typically occurs approximately 14 days after the start of the period (for a standard 28-day cycle), and LMP is nearly always known while conception date is rarely certain. This means the first two weeks of the 40-week &quot;pregnancy&quot; technically predate fertilization.</p>
+                <p>Our calculator supports four calculation methods:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Last menstrual period:</strong> Most common; adds 280 days from LMP; adjusts for cycle length (longer cycles shift the due date later, shorter cycles earlier)</li>
+                  <li><strong>Conception date:</strong> Adds 266 days (38 weeks) from known conception; useful for those tracking ovulation precisely</li>
+                  <li><strong>IVF transfer date:</strong> Adds days based on embryo age at transfer (day 3 transfer: +263 days; day 5 blastocyst: +261 days)</li>
+                  <li><strong>Ultrasound date:</strong> Works backward from a gestational age confirmed by early ultrasound measurement</li>
+                </ul>
+                <p>Pregnancy is divided into three trimesters:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>First trimester (weeks 1–13):</strong> Organ formation, highest miscarriage risk, morning sickness peak; ends with first prenatal screening</li>
+                  <li><strong>Second trimester (weeks 14–26):</strong> Visible growth, fetal movement begins (&sim;weeks 18–22), anatomy scan at weeks 18–20, most comfortable trimester for many</li>
+                  <li><strong>Third trimester (weeks 27–40):</strong> Rapid fetal weight gain, lungs maturing, preparation for birth; full term at 39–40 weeks</li>
+                </ul>
+                <p>Only about 4–5% of babies are born on their calculated due date. Approximately 80% of births occur between 38 and 42 weeks of gestation. A first-trimester ultrasound remains the most accurate method of confirming gestational age and establishing a clinical due date.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Due Date Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>LMP: <strong>January 15</strong> | Cycle length: <strong>28 days</strong></p>
+                <p><strong>Estimated due date:</strong> January 15 + 280 days = <strong>October 22</strong></p>
+                <p>Key milestones from this LMP:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Week 8 (March 11): First OB appointment; heartbeat visible on ultrasound</li>
+                  <li>Week 10–13 (March–April): First trimester screening (nuchal translucency, cell-free DNA testing)</li>
+                  <li>Week 14 (April 17): Second trimester begins</li>
+                  <li>Week 18–20 (May 22–June 5): Anatomy scan; sex determination possible</li>
+                  <li>Week 24 (July 3): Viability threshold — survival possible outside womb with NICU support</li>
+                  <li>Week 27 (July 24): Third trimester begins</li>
+                  <li>Week 28 (July 31): Glucose challenge test; Rh immune globulin if Rh-negative</li>
+                  <li>Week 36+ (October 3+): Weekly prenatal visits; Group B strep test</li>
+                  <li>Week 39–40 (October 16–22): Full term; most babies arrive in this window</li>
+                </ul>
+                <p>If this person&apos;s cycle were 35 days instead of 28, ovulation would occur around day 21 rather than day 14 — and the due date would shift 7 days later to <strong>October 29</strong>. This cycle-length adjustment is one of the key refinements our calculator applies over the basic Naegele&apos;s rule.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Due Date Accuracy</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Cycle length variation:</strong> Naegele&apos;s rule assumes a 28-day cycle with ovulation on day 14. Women with cycles significantly longer or shorter than 28 days will have due dates that differ from the standard calculation. Our calculator adjusts by the difference between actual cycle length and 28 days.</p>
+                <p><strong>LMP vs. conception dating:</strong> LMP-based dating works well when cycles are regular. However, if a woman has irregular cycles, recently stopped hormonal birth control (which can delay ovulation), or experienced stress-delayed ovulation, the LMP date may not reliably reflect actual conception timing. In these cases, conception date (if known) or early ultrasound dating is more accurate.</p>
+                <p><strong>Ultrasound dating:</strong> A first-trimester ultrasound between 8–13 weeks is considered the gold standard for confirming gestational age. Crown-rump length (CRL) measurement at this stage is accurate to within 5–7 days. If the ultrasound date differs significantly from the LMP estimate, providers typically use the ultrasound date as the official due date.</p>
+                <p><strong>Multiple pregnancy:</strong> Twins, triplets, and higher-order multiples are typically delivered earlier than singleton pregnancies — often at 36–38 weeks for twins, 32–34 weeks for triplets. The same due date formula applies, but expectation management for delivery timing is different.</p>
+                <p><strong>Preterm and post-term ranges:</strong> Preterm birth is defined as delivery before 37 weeks; late preterm (34–37 weeks) babies usually do well with minimal NICU intervention. Post-term pregnancy (beyond 42 weeks) increases the risk of certain complications, and most providers recommend induction if pregnancy continues past 41–42 weeks.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333342" /></div>
         </div>

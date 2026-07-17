@@ -108,6 +108,49 @@ export default function BodyFatPage() {
               The US Navy circumference method estimates body fat percentage from simple body measurements. For men, it uses height, waist, and neck circumferences. For women, it adds hip circumference. The formula applies logarithmic math to these measurements and has been validated against more expensive methods like hydrostatic weighing. While not as precise as a DEXA scan, it gives a practical estimate you can track over time at home. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Body Fat Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Body fat percentage is the proportion of your total body weight made up of fat tissue. Unlike BMI — which infers weight status from height and weight alone — body fat percentage directly measures body composition, making it a far more informative health metric.</p>
+                <p>Our calculator uses the <strong>US Navy circumference method</strong>, which estimates body fat from basic body measurements using logarithmic regression formulas validated against hydrostatic weighing. The formulas (using inches) are:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Men:</strong> %BF = 86.010 &times; log&#x2081;&#x2080;(waist &minus; neck) &minus; 70.041 &times; log&#x2081;&#x2080;(height) + 36.76</li>
+                  <li><strong>Women:</strong> %BF = 163.205 &times; log&#x2081;&#x2080;(waist + hips &minus; neck) &minus; 97.684 &times; log&#x2081;&#x2080;(height) &minus; 78.387</li>
+                </ul>
+                <p>For men, the required measurements are waist circumference at the navel, neck circumference at its narrowest point, and height. For women, hip circumference at the widest point is also needed. Measurements in inches are converted automatically by the calculator.</p>
+                <p>The Navy method is popular for home use because it requires only a flexible tape measure and produces estimates typically within 3–4 percentage points of laboratory methods. More precise alternatives — in order of accuracy — include DEXA scan (&sim;1–2% error), hydrostatic weighing (&sim;2–3%), air displacement plethysmography (&sim;2–3%), skinfold calipers (&sim;3–5%), and bioelectrical impedance (&sim;3–5%). The Navy method sits in the same accuracy range as skinfold and BIA methods, but is more accessible and consistent.</p>
+                <p>Healthy body fat ranges by sex:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Men:</strong> Essential 2–5% | Athletes 6–13% | Fitness 14–17% | Acceptable 18–24% | Obese 25%+</li>
+                  <li><strong>Women:</strong> Essential 10–13% | Athletes 14–20% | Fitness 21–24% | Acceptable 25–31% | Obese 32%+</li>
+                </ul>
+                <p>Women carry more essential fat than men due to physiological requirements for hormonal function and reproductive health. Dropping below essential fat levels — even briefly — can disrupt hormone production, bone density, and immune function.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Body Fat Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Male example:</strong> Tom is 5&prime;10&Prime; (70 inches) with a 36-inch waist and 15-inch neck.<br />%BF = 86.010 &times; log&#x2081;&#x2080;(36 &minus; 15) &minus; 70.041 &times; log&#x2081;&#x2080;(70) + 36.76<br />= 86.010 &times; 1.3222 &minus; 70.041 &times; 1.8451 + 36.76<br />= 113.7 &minus; 129.2 + 36.76 = <strong>21.3% &rarr; Acceptable range</strong></p>
+                <p><strong>Female example:</strong> Lisa is 5&prime;5&Prime; (65 inches) with a 29-inch waist, 38-inch hips, and 13-inch neck.<br />%BF = 163.205 &times; log&#x2081;&#x2080;(29 + 38 &minus; 13) &minus; 97.684 &times; log&#x2081;&#x2080;(65) &minus; 78.387<br />= 163.205 &times; 1.7324 &minus; 97.684 &times; 1.8129 &minus; 78.387<br />= 282.8 &minus; 177.0 &minus; 78.387 = <strong>27.4% &rarr; Acceptable range</strong></p>
+                <p>Now consider two men who both weigh 185 lbs at 5&prime;10&Prime;. One is a strength athlete with 10% body fat — that&apos;s 18.5 lbs of fat and 166.5 lbs of lean mass. The other is sedentary with 25% body fat — that&apos;s 46.3 lbs of fat and 138.8 lbs of lean mass. Both have the same BMI (26.5), but their health and body composition profiles are completely different. Body fat percentage reveals the distinction that BMI cannot.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Body Fat Measurements</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Measurement accuracy:</strong> The Navy method is only as accurate as the measurements taken. Use a non-stretch fabric or fiberglass tape measure rather than a cloth one. Pull the tape snug but not compressing the skin. Measure at the same time of day each time — ideally in the morning before eating or exercising — for consistent tracking over time.</p>
+                <p><strong>Hydration:</strong> Bioelectrical impedance methods (not used here, but commonly available) are significantly affected by hydration status. The circumference method is less sensitive to hydration, but significant water retention — particularly around the waist — can affect measurements.</p>
+                <p><strong>Muscle mass:</strong> The Navy formula estimates fat based on circumferences at locations where fat preferentially accumulates. People with very high muscle mass in the trunk — particularly large erector spinae or oblique muscles — may have inflated waist measurements that increase the body fat estimate beyond their true fat percentage.</p>
+                <p><strong>Age-related changes:</strong> As we age, fat tends to redistribute from peripheral locations (arms, legs) toward the trunk. The Navy formula accounts for this reasonably well because it measures waist circumference, but age-related changes in fat distribution mean body fat can increase even when total weight stays constant.</p>
+                <p><strong>Essential fat vs. storage fat:</strong> Essential fat is the minimum required for survival — it protects organs, insulates the body, and supports hormone production. Storage fat is the energy reserve above this minimum. All body fat measurement methods measure total fat, which includes both types. Going below essential fat levels (below 2–5% for men, 10–13% for women) is dangerous regardless of the measurement method used.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333336" /></div>
         </div>

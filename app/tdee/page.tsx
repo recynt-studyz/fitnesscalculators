@@ -108,6 +108,55 @@ export default function TDEEPage() {
               Your TDEE is the most important number in nutrition planning. Eat at your TDEE and your weight stays stable. Eat below it and you lose weight. Eat above it and you gain weight. The accuracy of your TDEE determines how well your plan works — which is why using a validated formula like Mifflin-St Jeor and being honest about your activity level is critical. Start with our estimate, track your results for 2–3 weeks, and adjust as needed. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the TDEE Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Total Daily Energy Expenditure (TDEE) is the total number of calories your body burns in a 24-hour period across all activities. It is calculated by multiplying your Basal Metabolic Rate (BMR) by an activity multiplier that accounts for movement above complete rest.</p>
+                <p>TDEE is made up of four distinct components:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>BMR (60–75% of TDEE):</strong> Energy burned at complete rest — breathing, circulation, organ function, temperature regulation</li>
+                  <li><strong>Thermic effect of food — TEF (roughly 10%):</strong> Calories burned digesting, absorbing, and metabolizing food; protein has the highest TEF (20–30%), fat the lowest (0–3%)</li>
+                  <li><strong>Exercise activity thermogenesis — EAT (5–15%):</strong> Calories burned during deliberate structured exercise sessions</li>
+                  <li><strong>Non-exercise activity thermogenesis — NEAT (varies widely):</strong> All movement that is not deliberate exercise — walking, fidgeting, standing, housework, gesturing while talking</li>
+                </ul>
+                <p>NEAT is the most variable component of TDEE and the most underappreciated. Research by Dr. James Levine at the Mayo Clinic found that NEAT can vary by up to 2,000 calories per day between two people of similar size. A naturally fidgety person who walks throughout their day may burn 800–1,500 more calories daily than a sedentary person of identical weight — without a single gym session. This is one reason why some people seem to &quot;not gain weight no matter what they eat&quot; while others gain easily at the same intake.</p>
+                <p>The activity multipliers applied to BMR are:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Sedentary (desk job, little movement): &times; 1.2</li>
+                  <li>Lightly active (1–3 exercise sessions/week): &times; 1.375</li>
+                  <li>Moderately active (3–5 sessions/week): &times; 1.55</li>
+                  <li>Very active (6–7 sessions/week): &times; 1.725</li>
+                  <li>Extremely active (physical job + daily training): &times; 1.9</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">TDEE Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Consider two versions of the same person: a 35-year-old man, 5&prime;10&Prime; (178 cm), 180 lbs (81.6 kg).</p>
+                <p><strong>BMR (Mifflin-St Jeor):</strong><br />= (10 &times; 81.6) + (6.25 &times; 178) &minus; (5 &times; 35) + 5<br />= 816 + 1,112.5 &minus; 175 + 5 = <strong>1,758 calories/day</strong></p>
+                <p><strong>Version A — Sedentary office worker:</strong><br />TDEE = 1,758 &times; 1.2 = <strong>2,110 calories/day</strong></p>
+                <p><strong>Version B — Very active (trains 6 days/week):</strong><br />TDEE = 1,758 &times; 1.725 = <strong>3,032 calories/day</strong></p>
+                <p>The difference is <strong>922 calories/day</strong> — nearly a full extra meal. If the sedentary version adopts the active person&apos;s calorie intake without changing his activity, he gains roughly one pound of fat every four days. This is why &quot;eat less, move more&quot; works: increasing TDEE while maintaining intake creates a natural deficit without eating less.</p>
+                <p>A construction worker performing heavy manual labor all day may hit TDEE &times; 1.9, while a software engineer who works out 5 days per week but sits 10 hours otherwise is closer to &times; 1.55. Correctly identifying your activity level is the single most important input in any TDEE calculator.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your TDEE</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Activity level accuracy:</strong> Most people overestimate how active they are. The activity multiplier is the largest variable in your TDEE calculation. If your weight isn&apos;t moving as expected after 2–3 weeks of consistent tracking, try dropping one activity level and see whether results improve before changing your diet.</p>
+                <p><strong>NEAT (non-exercise activity thermogenesis):</strong> This includes every calorie burned outside of structured exercise — walking to meetings, taking stairs, fidgeting, doing household tasks. NEAT is highly individual and largely subconscious. It also suppresses during caloric restriction (a metabolic adaptation), which is one reason fat loss slows even when food intake stays constant.</p>
+                <p><strong>Metabolic adaptation during dieting:</strong> Sustained caloric restriction triggers hormonal changes that reduce TDEE independent of activity level. Leptin drops, thyroid output decreases, and NEAT unconsciously declines. After 8–12 weeks in a deficit, TDEE may be 10–15% lower than the original calculation — requiring recalculation and target adjustment.</p>
+                <p><strong>Muscle mass:</strong> More lean mass means higher BMR and therefore higher TDEE at every activity level. Resistance training builds muscle that persistently raises TDEE over time — making it one of the most effective long-term strategies for maintaining a higher calorie budget.</p>
+                <p><strong>Age-related decline:</strong> TDEE decreases with age as both BMR declines and lifestyle activity tends to reduce. A 60-year-old has a significantly lower TDEE than they did at 30, even with identical exercise habits — primarily because of lower BMR driven by lean mass loss. Strength training throughout life partially offsets this effect.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333338" /></div>
         </div>

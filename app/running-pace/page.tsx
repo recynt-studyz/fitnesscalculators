@@ -108,6 +108,58 @@ export default function RunningPacePage() {
               Whether you are training for your first 5K or targeting a marathon PR, our running pace calculator helps you plan every race and training run. Use Pace mode to analyze past runs, Finish Time mode to set race goals, or Distance mode to plan time-based workouts. The race prediction table gives instant estimates for 5K, 10K, half marathon, and marathon based on your current pace — great for setting realistic race goals. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Running Pace Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Running pace is the time it takes to cover one unit of distance — typically expressed as minutes per mile (min/mi) or minutes per kilometer (min/km). It is the inverse of speed: a faster runner has a lower pace number (fewer minutes per mile) and a higher speed number (more miles per hour).</p>
+                <p>The three fundamental relationships:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Pace = Time &divide; Distance</strong> (e.g., 30 min &divide; 3.1 mi = 9:41/mi)</li>
+                  <li><strong>Time = Pace &times; Distance</strong> (e.g., 9:41/mi &times; 3.1 mi = 30 min)</li>
+                  <li><strong>Distance = Time &divide; Pace</strong> (e.g., 30 min &divide; 9:41/mi = 3.1 mi)</li>
+                </ul>
+                <p>Our calculator supports all three modes — enter any two values to calculate the third. It also converts automatically between min/mi, min/km, mph, and kph.</p>
+                <p>Understanding training pace zones helps structure runs for different fitness objectives:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Easy / recovery pace:</strong> Conversational effort; 60–70% of max heart rate; builds aerobic base; should comprise 80% of total weekly mileage</li>
+                  <li><strong>Tempo pace:</strong> &quot;Comfortably hard&quot;; 80–90% max HR; improves lactate threshold; sustained for 20–40 minutes</li>
+                  <li><strong>Interval / VO2max pace:</strong> Near-maximal effort; 90–95% max HR; 400m–1 mile repeats with rest; improves aerobic capacity</li>
+                  <li><strong>Race pace:</strong> The specific pace targeted for goal race completion; varies by distance and fitness</li>
+                </ul>
+                <p>Elevation affects pace significantly. A rule of thumb: add approximately 90 seconds per mile for every 100 feet per mile of elevation gain. Running on trail surfaces adds a further 10–20% to equivalent effort pace. Our calculator works with flat-course pace — factor in terrain when setting realistic training targets.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Running Pace: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Emma wants to finish a half marathon (13.1 miles) in under 2 hours. What pace does she need?</p>
+                <p><strong>Required pace = 120 minutes &divide; 13.1 miles = 9:09 per mile</strong> (or 5:41 per km)</p>
+                <p>To build safely to this race pace, Emma&apos;s training should include:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Easy long runs:</strong> 10:30–11:00/mi — the majority of her weekly mileage, building endurance without excessive stress</li>
+                  <li><strong>Tempo runs:</strong> 8:45–9:00/mi — 20–30 min sustained, improving her lactate threshold so race pace feels more manageable</li>
+                  <li><strong>Speed intervals:</strong> 7:30–8:00/mi — short repeats (400m–800m) at effort above race pace to improve aerobic capacity and running economy</li>
+                  <li><strong>Race-pace miles:</strong> 9:09/mi — periodic race-pace miles within long runs to confirm the target feels achievable before race day</li>
+                </ul>
+                <p>Using our pace calculator, Emma can also see predicted finish times for other distances at her current fitness: if she runs a 9:09/mi half marathon, the race predictor estimates a 5K of approximately 25:30, a 10K of around 53:00, and a full marathon of roughly 4:10 using standard performance conversion models.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Running Pace</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Fitness level and aerobic base:</strong> Aerobic capacity (VO2max) is the primary determinant of running performance. Higher VO2max means a faster sustainable pace at any given effort level. Consistent training over months and years raises VO2max and improves running economy — how efficiently you use oxygen at a given pace.</p>
+                <p><strong>Terrain:</strong> Soft surfaces (trails, grass) absorb more energy with each footstrike, slowing pace by 10–20% compared to road or track at equivalent effort. Hills add significant time — a 5% grade at 5:00/km effort feels like running 4:15/km on flat terrain in terms of cardiovascular demand.</p>
+                <p><strong>Weather conditions:</strong> Heat and humidity are the biggest environmental pace disruptors. Performance drops measurably above 55&deg;F (13&deg;C) for competitive runners and more significantly above 70&deg;F (21&deg;C). A common adjustment is to add 30 seconds per mile for every 10&deg;F above 60&deg;F on race day.</p>
+                <p><strong>Race distance:</strong> Nobody can sustain 5K pace for a marathon. As race distance increases, sustainable pace slows in a predictable pattern. World-class athletes run a marathon approximately 10–15% slower than their half marathon pace. Recreational runners typically slow 15–25% from half to full marathon.</p>
+                <p><strong>Heart rate zones:</strong> Pace is a proxy for effort, but heart rate directly measures cardiovascular load. Two runners at the same pace may be at very different effort levels depending on their fitness. Over time, tracking both pace and heart rate reveals fitness improvements: the same pace becomes easier (lower heart rate) as aerobic capacity improves.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333341" /></div>
         </div>

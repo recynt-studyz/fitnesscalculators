@@ -108,6 +108,56 @@ export default function WaterIntakePage() {
               Water is involved in nearly every bodily process — digestion, temperature regulation, joint lubrication, nutrient transport, and waste removal. Even mild dehydration (1–2% of body weight) can impair physical and cognitive performance. Staying properly hydrated supports better workouts, faster recovery, clearer thinking, and healthier skin. Use our water intake calculator to find your personalized daily target and the suggested schedule to spread your intake throughout the day. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Water Intake Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Daily water needs vary significantly based on body size, activity, and environment. Our calculator uses a body-weight-based baseline formula and applies adjustments for exercise, climate, and other factors:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Base formula:</strong> Body weight in lbs &divide; 2 = ounces of water per day (or body weight in kg &times; 0.033 = liters per day)</li>
+                  <li><strong>Exercise adjustment:</strong> Add approximately 12 oz (350 ml) per 30 minutes of moderate-intensity exercise, or up to 24 oz (700 ml) per 30 minutes of vigorous exercise in heat</li>
+                  <li><strong>Climate adjustment:</strong> Hot or humid conditions increase sweat loss; add 16–24 oz above the base target</li>
+                </ul>
+                <p>The widely quoted &quot;8 glasses a day&quot; (64 oz) recommendation is not grounded in controlled research — it originated from a 1945 U.S. Food and Nutrition Board recommendation that was misread as a guideline. The National Academies of Sciences actually recommends approximately <strong>125 oz (3.7 liters) per day total fluid intake for men</strong> and <strong>91 oz (2.7 liters) for women</strong> — including water from food, which contributes 20–30% of daily fluid intake through fruits, vegetables, and other foods.</p>
+                <p>Water participates in virtually every biological process. It transports nutrients into cells, removes metabolic waste products, lubricates joints, regulates body temperature through sweating, maintains blood volume for cardiovascular function, and enables digestion. Even mild dehydration — a fluid deficit of just 1–2% of body weight — measurably impairs cognitive performance, mood, physical endurance, and coordination.</p>
+                <p>The most practical real-time hydration indicator is urine color. Pale straw yellow indicates adequate hydration. Darker yellow or amber indicates dehydration. Colorless urine may indicate overhydration (not a concern in most adults but relevant in endurance athletes who over-drink during races, risking hyponatremia).</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Water Intake: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Marcus weighs 170 lbs (77 kg), exercises for 45 minutes daily, and lives in a hot climate.</p>
+                <p><strong>Base water need:</strong> 170 &divide; 2 = <strong>85 oz/day</strong> (2.5 liters)</p>
+                <p><strong>Exercise adjustment (45 min):</strong> +18 oz (530 ml)</p>
+                <p><strong>Hot climate adjustment:</strong> +16 oz (470 ml)</p>
+                <p><strong>Total daily target: &sim;119 oz (3.5 liters)</strong></p>
+                <p>Not all of this needs to come from plain water. Marcus&apos; food contributes approximately 20–25 oz (600–750 ml) — particularly from fruits, vegetables, and cooked grains. His remaining fluid target from beverages is approximately 94–99 oz (2.7–2.9 liters), which he could distribute as:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Morning (waking): 16 oz — rehydrates after overnight fluid loss</li>
+                  <li>Pre-workout: 16 oz</li>
+                  <li>During workout (45 min): 16–24 oz</li>
+                  <li>Post-workout recovery: 16 oz</li>
+                  <li>Throughout afternoon/evening: remaining 20–25 oz spread across meals and between</li>
+                </ul>
+                <p>This schedule ensures Marcus stays hydrated before thirst signals appear. Thirst is a late-onset indicator — by the time you feel thirsty, you may already be 1–2% dehydrated.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your Water Needs</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Body weight:</strong> Larger bodies have more total fluid volume to maintain and produce more metabolic heat, requiring more water for temperature regulation. The weight-based formula (lbs &divide; 2 = oz) captures this proportionality — a 240 lb person needs substantially more water than a 120 lb person at the same activity level.</p>
+                <p><strong>Exercise intensity and duration:</strong> Sweat rates during exercise range from 0.5 to 2.5 liters per hour depending on intensity, heat, and individual variation. High-intensity outdoor exercise in summer heat produces the highest sweat losses. Weighing yourself before and after a workout gives a precise measure: each pound lost during exercise equals approximately 16 oz of fluid to replace.</p>
+                <p><strong>Climate and humidity:</strong> Heat and humidity dramatically increase fluid loss through sweating. High humidity impairs evaporative cooling (sweat doesn&apos;t evaporate as efficiently), so the body sweats more to compensate. Altitude also increases fluid losses through faster, deeper breathing in thinner air.</p>
+                <p><strong>Pregnancy and breastfeeding:</strong> Pregnancy increases blood volume and metabolic demands, increasing water needs by 8–10 oz (250–300 ml) per day above baseline. Breastfeeding produces an additional 25–30 oz (750–900 ml) of fluid output daily and requires a corresponding intake increase of approximately 16 oz above pre-pregnancy levels.</p>
+                <p><strong>Alcohol and caffeine:</strong> Alcohol is a diuretic — it increases urine output beyond the volume consumed, contributing to net fluid loss. For every alcoholic drink consumed, add 8–12 oz of water to compensate. Caffeine has a mild diuretic effect at high doses, but research shows coffee and tea at typical consumption levels still produce a net positive fluid contribution — the hydration from the beverage outweighs the mild diuresis.</p>
+                <p><strong>Illness:</strong> Fever, vomiting, and diarrhea all dramatically increase fluid losses. For every degree Fahrenheit of fever above 98.6&deg;F, the body loses additional fluid through sweating. Gastrointestinal illnesses can cause rapid dehydration, particularly in children and older adults who have reduced thirst sensitivity.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333344" /></div>
         </div>

@@ -137,6 +137,48 @@ export default function Home() {
             </p>
           </div>
 
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the BMI Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Body Mass Index is calculated by dividing weight in kilograms by the square of height in meters (kg/m²). In imperial units the formula is: BMI = (weight in pounds &times; 703) &divide; (height in inches)&sup2;. The result is a dimensionless number used to categorize weight status relative to height.</p>
+                <p>The concept originated with Belgian mathematician Adolphe Quetelet in the 1830s, who developed it as a statistical tool for studying population-level weight distribution — not as a clinical measure for individuals. It entered mainstream medicine in the 1970s after physiologist Ancel Keys demonstrated it correlated reasonably well with body fat across large population samples and coined the term &quot;Body Mass Index.&quot;</p>
+                <p>The four standard BMI categories recognized by the WHO and CDC are:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Underweight — below 18.5:</strong> May indicate nutritional deficiency, malabsorption, or underlying illness</li>
+                  <li><strong>Normal weight — 18.5 to 24.9:</strong> Associated with the lowest risk of weight-related chronic disease in population studies</li>
+                  <li><strong>Overweight — 25 to 29.9:</strong> Elevated risk of cardiovascular disease, type 2 diabetes, and hypertension</li>
+                  <li><strong>Obese — 30 and above:</strong> Significantly elevated risk; further classified as Class I (30–34.9), Class II (35–39.9), and Class III (40+)</li>
+                </ul>
+                <p>Health organizations rely on BMI because it requires only height and weight — making it fast, free, and reproducible at population scale. For the general non-athletic population it correlates moderately well with directly measured body fat, which is why it persists as a first-line screening tool despite well-documented limitations. BMI should always be interpreted alongside clinical context, not in isolation.</p>
+                <p>What BMI does not account for includes muscle mass (athletes often score as &quot;overweight&quot; with low body fat), bone density, age (older adults carry more fat at the same BMI), ethnicity (Asian populations face metabolic risk at lower BMI values), sex (women naturally carry 5–10% more essential fat), and body fat distribution (abdominal fat is metabolically riskier than peripheral fat, but BMI provides no information about where fat is stored).</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">BMI Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Metric example:</strong> Maria is 168 cm tall and weighs 72 kg.<br />BMI = 72 &divide; (1.68)&sup2; = 72 &divide; 2.8224 = <strong>25.5 &rarr; Overweight</strong></p>
+                <p><strong>Imperial example:</strong> Michael is 5&prime;11&Prime; (71 inches) and weighs 185 lbs.<br />BMI = (185 &times; 703) &divide; (71)&sup2; = 130,055 &divide; 5,041 = <strong>25.8 &rarr; Overweight</strong></p>
+                <p>However, Michael is a recreational weightlifter with approximately 14% body fat — squarely in the fitness range for men. His BMI of 25.8 reflects muscle mass, not excess fat. A sedentary person at identical height and weight but 28% body fat would score the same 25.8, yet carry meaningfully different health risk. This is BMI&apos;s central limitation: it cannot distinguish between fat mass and lean mass.</p>
+                <p>Now consider the reverse: someone at BMI 22 (firmly &quot;normal&quot;) with very little muscle and central abdominal fat. Their BMI looks healthy, but their metabolic risk may be elevated — a phenomenon sometimes called &quot;normal weight obesity&quot; or &quot;skinny fat.&quot; For non-athletic adults, BMI is a useful first-pass screen; for anyone with above-average muscle or unusual fat distribution, body fat percentage and waist circumference provide more complete information.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect BMI Interpretation</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Age:</strong> BMI thresholds remain constant across adulthood, but body composition shifts substantially with age. Adults over 60 tend to carry more fat and less muscle at the same BMI as younger adults. A BMI of 27 in a 70-year-old carries different clinical implications than in a 30-year-old, and some physicians interpret results more leniently for older patients.</p>
+                <p><strong>Sex:</strong> Women naturally store 5–10% more essential fat than men due to hormonal and reproductive physiology. A BMI of 24 typically corresponds to roughly 27–30% body fat in women versus 18–22% in men — a clinically significant difference that BMI entirely obscures behind a single shared scale.</p>
+                <p><strong>Ethnicity:</strong> People of South Asian, East Asian, and Southeast Asian descent develop metabolic complications — insulin resistance, cardiovascular risk, type 2 diabetes — at BMI values lower than European populations. The WHO recommends lower action thresholds for Asian adults: 23 for overweight and 27.5 for obese.</p>
+                <p><strong>Muscle mass:</strong> Skeletal muscle is denser than adipose tissue. Athletes and consistent strength trainers frequently score as &quot;overweight&quot; by BMI with excellent body composition and low health risk. For this population, body fat percentage is a far more relevant metric.</p>
+                <p><strong>Bone density:</strong> Above-average bone mineral density — common in those with a history of impact or resistance exercise — adds body weight without adding fat, inflating BMI without corresponding health risk.</p>
+                <p><strong>Pregnancy:</strong> BMI during pregnancy incorporates the weight of the fetus, placenta, amniotic fluid, and expanded blood volume. It is not meaningful during pregnancy; healthy gestational weight gain is guided by pre-pregnancy BMI, not current BMI.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10">
             <FAQ questions={faqs} />
           </div>

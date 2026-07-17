@@ -108,6 +108,50 @@ export default function BMRPage() {
               Your basal metabolic rate is the foundation of calorie planning. Without knowing how many calories you burn at rest, you cannot accurately set a deficit or surplus for your goals. The Mifflin-St Jeor equation — used by this BMR calculator — is considered the most accurate for the general population. Multiply your BMR by your activity factor to get your TDEE, then adjust up or down to reach your weight goal. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the BMR Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Basal Metabolic Rate (BMR) is the number of calories your body burns at complete rest — the energy required to keep you alive without any physical activity whatsoever. It powers every involuntary biological process: breathing, heartbeat, circulation, body temperature regulation, brain function, organ maintenance, and cellular repair.</p>
+                <p>Our calculator uses the <strong>Mifflin-St Jeor equation</strong>, published in 1990 and considered the most accurate BMR formula for the general population:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Men:</strong> BMR = (10 &times; weight kg) + (6.25 &times; height cm) &minus; (5 &times; age) + 5</li>
+                  <li><strong>Women:</strong> BMR = (10 &times; weight kg) + (6.25 &times; height cm) &minus; (5 &times; age) &minus; 161</li>
+                </ul>
+                <p>We also show the older <strong>Harris-Benedict formula</strong> (1919, revised 1984) for comparison:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Men:</strong> BMR = 88.362 + (13.397 &times; kg) + (4.799 &times; cm) &minus; (5.677 &times; age)</li>
+                  <li><strong>Women:</strong> BMR = 447.593 + (9.247 &times; kg) + (3.098 &times; cm) &minus; (4.330 &times; age)</li>
+                </ul>
+                <p>BMR typically accounts for 60–75% of your total daily calorie expenditure. The organs consuming the most energy at rest are the liver (~27% of BMR), the brain (~19%), skeletal muscle (~18%), the heart (~7%), and the kidneys (~10%). The remaining organs share the remainder. This distribution explains why increasing muscle mass — even a modest amount — meaningfully raises BMR: skeletal muscle is metabolically active tissue even when not contracting.</p>
+                <p>BMR decreases with age at roughly 1–2% per decade, primarily due to the natural loss of lean muscle mass (sarcopenia). This decline begins in the mid-20s and accelerates after age 60. Maintaining muscle through resistance training is the most effective evidence-based strategy for slowing BMR decline with age.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">BMR Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>45-year-old man:</strong> 180 cm, 85 kg<br />BMR = (10 &times; 85) + (6.25 &times; 180) &minus; (5 &times; 45) + 5<br />= 850 + 1,125 &minus; 225 + 5 = <strong>1,755 calories/day</strong></p>
+                <p><strong>45-year-old woman:</strong> 165 cm, 65 kg<br />BMR = (10 &times; 65) + (6.25 &times; 165) &minus; (5 &times; 45) &minus; 161<br />= 650 + 1,031 &minus; 225 &minus; 161 = <strong>1,295 calories/day</strong></p>
+                <p>The difference between these two results (&sim;460 calories) reflects differences in height, weight, and the sex constant — not just body size. If both individuals were instead 50 years old (five years older) with identical stats, the formula reduces BMR by exactly 25 calories (&minus;5 per year &times; 5 years). Over a lifetime this age-related metabolic decline adds up — a 60-year-old has a BMR roughly 75–100 calories lower than their 40-year-old self at the same body weight, all else being equal.</p>
+                <p>To translate BMR into actionable daily calorie targets, multiply by your activity multiplier (1.2 to 1.9) to get your TDEE. The BMR itself is rarely the number you target — it&apos;s the foundation your TDEE is built on.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your BMR</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Age:</strong> BMR declines approximately 1–2% per decade after age 20, driven by progressive loss of metabolically active lean tissue. The decline is gradual but cumulative — a 60-year-old has a meaningfully lower resting metabolism than a 30-year-old at the same weight.</p>
+                <p><strong>Sex:</strong> Men average higher BMR than women of the same body weight due to greater lean mass and lower essential body fat. This is captured in the Mifflin-St Jeor formula by the +5 (men) versus &minus;161 (women) constant — a fixed difference regardless of other stats.</p>
+                <p><strong>Height and weight:</strong> Taller and heavier bodies have greater organ mass, more surface area, and larger skeletal muscle volume — all of which increase resting energy expenditure. Both variables contribute directly to the BMR calculation.</p>
+                <p><strong>Muscle mass:</strong> Skeletal muscle burns roughly 6–7 more calories per pound at rest than fat tissue. Building muscle through resistance training is the most effective long-term strategy for increasing BMR, because the metabolic benefit persists 24 hours a day — not just during the workout.</p>
+                <p><strong>Thyroid function:</strong> The thyroid gland regulates metabolic rate through thyroid hormone production. Hypothyroidism (underactive thyroid) can reduce BMR by 15–30%, while hyperthyroidism increases it. Unexplained large discrepancies between calculated and actual calorie needs sometimes indicate an undiagnosed thyroid condition worth investigating.</p>
+                <p><strong>Body temperature:</strong> Core temperature regulation consumes a significant portion of BMR, particularly in cold environments. Fever increases BMR by approximately 7% per degree Fahrenheit of temperature elevation — one reason illness is often accompanied by increased appetite or weight loss.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333337" /></div>
         </div>

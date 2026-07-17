@@ -112,6 +112,61 @@ export default function CaloriesPage() {
               A calorie calculator takes the guesswork out of nutrition planning. By calculating your TDEE (Total Daily Energy Expenditure), you get a personalized starting point for your calorie target. Whether your goal is fat loss, maintaining your current weight, or building muscle, knowing your calorie needs is the foundation of any successful nutrition plan. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Calorie Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>A food calorie (kilocalorie) is the amount of energy needed to raise one kilogram of water by one degree Celsius. Your body uses this energy to power every biological process — from heartbeat and breathing to digestion, movement, and cell repair. Consuming more calories than you expend leads to weight gain; consuming fewer leads to weight loss.</p>
+                <p>Our calculator uses the <strong>Mifflin-St Jeor equation</strong> — the most widely validated formula for predicting resting metabolic rate in modern populations — to calculate your Basal Metabolic Rate (BMR):</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Men:</strong> BMR = (10 &times; weight kg) + (6.25 &times; height cm) &minus; (5 &times; age) + 5</li>
+                  <li><strong>Women:</strong> BMR = (10 &times; weight kg) + (6.25 &times; height cm) &minus; (5 &times; age) &minus; 161</li>
+                </ul>
+                <p>BMR is then multiplied by an activity factor to calculate your Total Daily Energy Expenditure (TDEE) — what you actually burn across a full day:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Sedentary (desk job, minimal movement): BMR &times; 1.2</li>
+                  <li>Lightly active (light exercise 1–3 days/week): BMR &times; 1.375</li>
+                  <li>Moderately active (exercise 3–5 days/week): BMR &times; 1.55</li>
+                  <li>Very active (hard exercise 6–7 days/week): BMR &times; 1.725</li>
+                  <li>Extremely active (physical job + daily training): BMR &times; 1.9</li>
+                </ul>
+                <p>Mifflin-St Jeor is preferred over the older Harris-Benedict formula (1919) because it was derived from a modern population and consistently outperforms it in validation studies — a 2005 meta-analysis found it accurate within 10% for the largest proportion of subjects. The Harris-Benedict formula, developed from a much smaller and less representative dataset, tends to overestimate BMR slightly.</p>
+                <p>A <strong>caloric deficit</strong> means eating fewer calories than your TDEE, forcing your body to draw on stored fat for energy. A cumulative deficit of ~3,500 calories corresponds to approximately one pound of fat lost. A <strong>caloric surplus</strong> above TDEE provides energy for muscle protein synthesis and weight gain during a bulk.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Calorie Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Sarah is 32 years old, 5&prime;5&Prime; (165 cm), weighs 140 lbs (63.5 kg), and exercises 3–4 days per week (moderately active).</p>
+                <p><strong>Step 1 — Calculate BMR:</strong><br />BMR = (10 &times; 63.5) + (6.25 &times; 165) &minus; (5 &times; 32) &minus; 161<br />= 635 + 1,031 &minus; 160 &minus; 161 = <strong>1,345 calories/day</strong></p>
+                <p><strong>Step 2 — Apply activity multiplier (moderately active &times; 1.55):</strong><br />TDEE = 1,345 &times; 1.55 = <strong>2,085 calories/day</strong></p>
+                <p><strong>Step 3 — Set goal-based targets:</strong></p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Maintain weight: 2,085 cal/day</li>
+                  <li>Lose 0.5 lb/week (&minus;250 cal/day deficit): 1,835 cal/day</li>
+                  <li>Lose 1 lb/week (&minus;500 cal/day deficit): 1,585 cal/day</li>
+                  <li>Gain 0.5 lb/week (+250 cal/day surplus): 2,335 cal/day</li>
+                </ul>
+                <p>At 1,585 calories/day, Sarah should prioritize protein intake — at least 100–125g/day — to preserve lean muscle during the deficit. If weight doesn&apos;t decrease after 2–3 weeks of consistent tracking, her actual TDEE is lower than estimated (a common finding due to overestimated activity level), and she should reduce intake by 100–150 calories and monitor again.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your Calorie Needs</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Age:</strong> Metabolic rate declines roughly 1–2% per decade after age 20, driven by the progressive loss of lean muscle mass. A 50-year-old has meaningfully lower calorie needs than a 25-year-old of identical height, weight, and activity — the Mifflin-St Jeor formula captures this through its age coefficient.</p>
+                <p><strong>Sex:</strong> Men average 5–10% higher BMR than women of the same body weight, primarily due to greater muscle mass and lower essential body fat percentage. The formula accounts for this with the +5 (men) versus &minus;161 (women) constant.</p>
+                <p><strong>Height and weight:</strong> Larger bodies require more energy to sustain. Both height and weight are the largest direct contributors to BMR — a taller, heavier person will always have a higher resting calorie burn than a shorter, lighter person of the same age and sex.</p>
+                <p><strong>Activity level:</strong> The activity multiplier is the most consequential and most frequently misestimated variable. Someone who exercises four times per week but otherwise sits all day is &quot;lightly active&quot; (×1.375), not &quot;moderately active&quot; (×1.55). Overestimating activity is one of the most common reasons calorie targets fail to produce expected results.</p>
+                <p><strong>Muscle mass:</strong> Muscle tissue burns approximately 6–7 more calories per pound at rest than fat tissue. Each pound of muscle gained slightly increases TDEE — which is why resistance training benefits long-term weight management beyond the calories burned during individual workouts.</p>
+                <p><strong>Metabolic adaptation:</strong> During prolonged calorie restriction, the body reduces energy expenditure through hormonal changes — decreased leptin, lowered thyroid output, and suppressed non-exercise activity thermogenesis (NEAT). Fat loss typically plateaus after 8–12 weeks, requiring a recalculated TDEE and adjusted targets.</p>
+                <p><strong>Thermic effect of food:</strong> Digesting food burns roughly 10% of total calorie intake. Protein carries the highest thermic effect (20–30%), meaning your body expends significantly more energy processing protein than fats (0–3%) or carbohydrates (5–10%) — one reason high-protein diets provide a modest metabolic advantage.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333334" /></div>
         </div>

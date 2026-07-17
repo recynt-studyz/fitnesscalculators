@@ -108,6 +108,60 @@ export default function IdealWeightPage() {
               Ideal weight formulas were developed to provide general guidance on healthy weight ranges based on height and sex. These estimates vary by a few pounds across formulas — which is normal and expected. The consensus range (the spread across all four formulas) gives you a practical target zone. Remember that a number on the scale is just one data point. Body composition, fitness level, and how you feel are equally important indicators of health. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Ideal Weight Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Ideal weight formulas estimate a healthy target weight based on height and sex. Our calculator runs four established formulas simultaneously and computes a consensus range from the results. Each formula was developed independently using different populations and assumptions — which is why they give slightly different results.</p>
+                <p><strong>The four formulas for men (with inches over 5 feet as the height variable):</strong></p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Hamwi (1964):</strong> 106 lbs + 6 lbs per inch over 5 feet — originally developed for medication dosing calculations</li>
+                  <li><strong>Devine (1974):</strong> 50 kg + 2.3 kg per inch over 5 feet — also developed for drug dosing; became widely used in clinical practice</li>
+                  <li><strong>Robinson (1983):</strong> 52 kg + 1.9 kg per inch over 5 feet — developed from a population study; tends to produce slightly lower values</li>
+                  <li><strong>Miller (1983):</strong> 56.2 kg + 1.41 kg per inch over 5 feet — another population-derived formula</li>
+                </ul>
+                <p><strong>The four formulas for women:</strong></p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Hamwi:</strong> 100 lbs + 5 lbs per inch over 5 feet</li>
+                  <li><strong>Devine:</strong> 45.5 kg + 2.3 kg per inch over 5 feet</li>
+                  <li><strong>Robinson:</strong> 49 kg + 1.7 kg per inch over 5 feet</li>
+                  <li><strong>Miller:</strong> 53.1 kg + 1.36 kg per inch over 5 feet</li>
+                </ul>
+                <p>None of these formulas is definitively &quot;correct.&quot; They were developed before modern body composition science and do not account for muscle mass, body fat distribution, or individual health markers. Together they define a useful reference range — not a single target number. The healthy BMI weight range (BMI 18.5–24.9) is also shown for additional context.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Ideal Weight: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>For a <strong>5&prime;10&Prime; male</strong> (10 inches over 5 feet), the four formulas produce:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Hamwi:</strong> 106 + (6 &times; 10) = 166 lbs (75.3 kg)</li>
+                  <li><strong>Devine:</strong> 50 + (2.3 &times; 10) = 73 kg = 161 lbs</li>
+                  <li><strong>Robinson:</strong> 52 + (1.9 &times; 10) = 71 kg = 156.5 lbs</li>
+                  <li><strong>Miller:</strong> 56.2 + (1.41 &times; 10) = 70.3 kg = 155 lbs</li>
+                </ul>
+                <p><strong>Consensus ideal weight range: approximately 155–166 lbs</strong></p>
+                <p>The BMI-based healthy weight range for the same height (18.5–24.9): <strong>129–173 lbs</strong> — a much wider band than the formula consensus.</p>
+                <p>This spread illustrates why ideal weight is a range, not a point. A 5&prime;10&Prime; man at 155 lbs and another at 166 lbs are both within the ideal weight consensus — but one might be lightly built with modest muscle and the other well-muscled with a medium frame. Both can be equally healthy. The formulas give you a starting reference, not a prescription.</p>
+                <p>Adding the frame size adjustment (&plusmn;5 kg / &plusmn;11 lbs) shifts the consensus range upward for large-framed individuals and downward for small-framed individuals, reflecting real differences in bone structure and lean tissue that affect healthy body weight.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your Ideal Weight</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Frame size:</strong> Bone structure varies significantly between individuals of the same height. A large-framed person has greater skeletal mass and naturally weighs more at any height — and can maintain a healthy body composition at weights above the standard formula results. Frame size is commonly estimated from wrist circumference or elbow breadth.</p>
+                <p><strong>Muscle mass:</strong> The ideal weight formulas were developed before modern strength sports and recreational fitness culture. A well-muscled person may healthily weigh 10–20 lbs more than the formula consensus at the same height — all as lean mass. Body fat percentage is a more meaningful metric for this population than ideal weight estimates.</p>
+                <p><strong>Age:</strong> Body composition shifts with age — lean mass decreases and fat mass tends to increase even when total weight stays constant. Older adults may be healthy at weights that fall slightly above the formula consensus, while maintaining the same body weight as their younger years may actually reflect loss of lean tissue.</p>
+                <p><strong>Sex:</strong> The formulas produce different results for men and women at the same height because women naturally carry more essential body fat and tend to have less skeletal muscle mass. The constants in each formula (e.g., 106 lbs vs. 100 lbs base for Hamwi) reflect these biological differences.</p>
+                <p><strong>Ethnicity:</strong> Like BMI, ideal weight formulas were developed primarily from European and American populations. People of Asian descent tend to have higher body fat at the same weight than people of European descent — meaning that for some ethnic groups, the lower end of the formula range may be a more appropriate target.</p>
+                <p><strong>Personal health goals:</strong> Ideal weight estimates are reference points, not rigid targets. Your optimal weight is ultimately defined by healthy biomarkers (blood pressure, blood glucose, lipids), physical performance, and how you feel — not by matching a formula result exactly.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333339" /></div>
         </div>

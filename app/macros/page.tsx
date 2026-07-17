@@ -108,6 +108,60 @@ export default function MacrosPage() {
               Tracking macros gives you more control over your body composition than counting calories alone. By ensuring adequate protein intake, you preserve muscle while losing fat. Adjusting carbs helps manage energy levels and cravings. Setting fat targets supports hormonal health. The right macro balance depends on your goals — our macro calculator personalizes your targets based on your stats and chosen diet style. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Macro Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Macronutrients — protein, carbohydrates, and fat — are the three nutrients that provide your body with energy. Unlike micronutrients (vitamins and minerals), which are needed in small quantities for specific biological processes, macronutrients are consumed in large amounts and directly supply the calories your body runs on.</p>
+                <p>Each macronutrient provides a fixed caloric value per gram:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Protein — 4 calories per gram:</strong> Builds and repairs muscle tissue, synthesizes enzymes and hormones, supports immune function, and is the least efficiently stored macronutrient</li>
+                  <li><strong>Carbohydrates — 4 calories per gram:</strong> The body&apos;s preferred fuel source, especially during high-intensity exercise; stored as glycogen in muscles and the liver for rapid energy access</li>
+                  <li><strong>Fat — 9 calories per gram:</strong> Essential for hormone production, absorption of fat-soluble vitamins (A, D, E, K), cell membrane integrity, and providing a sustained energy source</li>
+                </ul>
+                <p>Macro targets are calculated by allocating your daily calorie target (TDEE) across the three macronutrients according to your chosen ratio. Common distributions:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Balanced (30% protein / 40% carbs / 30% fat):</strong> Suitable for general fitness and body recomposition</li>
+                  <li><strong>Low Carb (40% protein / 20% carbs / 40% fat):</strong> Reduces insulin response; useful for fat loss without full ketosis</li>
+                  <li><strong>High Protein (40% protein / 30% carbs / 30% fat):</strong> Optimal for muscle building or fat loss where preserving lean mass is the priority</li>
+                  <li><strong>Keto (&sim;25% protein / 5% carbs / 70% fat):</strong> Designed to induce ketosis; the most restrictive approach requiring strict carbohydrate limits</li>
+                </ul>
+                <p>Protein is the most critical macro to optimize. Research consistently shows that consuming 0.7–1 gram of protein per pound of body weight (1.6–2.2 g/kg) during a caloric deficit dramatically reduces lean mass loss compared to lower protein intakes. Without adequate protein, a significant portion of weight lost comes from muscle — a poor body composition outcome that also lowers TDEE over time.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Macro Calculation: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>James is targeting fat loss at 1,800 calories/day. He chooses a 40% protein / 30% carb / 30% fat split to maximize muscle retention.</p>
+                <p><strong>Protein (40% of 1,800 = 720 calories):</strong><br />720 &divide; 4 = <strong>180g protein/day</strong></p>
+                <p><strong>Carbohydrates (30% of 1,800 = 540 calories):</strong><br />540 &divide; 4 = <strong>135g carbs/day</strong></p>
+                <p><strong>Fat (30% of 1,800 = 540 calories):</strong><br />540 &divide; 9 = <strong>60g fat/day</strong></p>
+                <p>To hit these targets with real food, James might structure his day as:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li>Breakfast: 5 egg whites + 2 whole eggs + 1 slice whole grain toast &rarr; ~35g protein, 15g carbs, 10g fat</li>
+                  <li>Lunch: 6 oz grilled chicken breast + &frac12; cup brown rice + salad &rarr; ~50g protein, 35g carbs, 6g fat</li>
+                  <li>Pre-workout: 170g Greek yogurt + 1 banana &rarr; ~17g protein, 40g carbs, 0g fat</li>
+                  <li>Dinner: 6 oz salmon + roasted vegetables + &frac12; sweet potato &rarr; ~40g protein, 30g carbs, 20g fat</li>
+                  <li>Evening: 150g cottage cheese + small handful almonds &rarr; ~25g protein, 8g carbs, 14g fat</li>
+                </ul>
+                <p>That totals roughly 167g protein, 128g carbs, and 50g fat — close to his targets. Weighing food in grams on a kitchen scale significantly improves accuracy over estimating portions by eye.</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Your Macro Targets</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Goal alignment:</strong> Your macro split should reflect your primary objective. Fat loss benefits from higher protein to preserve muscle. Muscle building benefits from adequate carbohydrates to fuel training sessions and support protein synthesis. Maintenance allows the most flexibility across distributions.</p>
+                <p><strong>Training type:</strong> Endurance athletes deplete glycogen stores and need higher carbohydrate intake to perform and recover. Strength and power athletes benefit from moderate carbs timed around training. General fitness allows flexible distribution across the day.</p>
+                <p><strong>Protein for muscle preservation:</strong> During any caloric deficit, protein intake below 0.7g per pound of bodyweight substantially increases lean mass loss. Maintaining — or even slightly increasing — protein intake while in a deficit is the most evidence-supported strategy for improving body composition while losing weight.</p>
+                <p><strong>Carbohydrate timing:</strong> Consuming 20–40g of carbohydrates before resistance training supports performance, while 30–60g post-workout accelerates glycogen resynthesis and recovery. Total daily carb intake matters more than timing for most recreational exercisers, but timing becomes more important at higher training volumes.</p>
+                <p><strong>Fat quality:</strong> Within your fat target, prioritize unsaturated fats — olive oil, avocado, nuts, seeds, and fatty fish. These support cardiovascular health and hormone production. Limit saturated fat and avoid trans fats from partially hydrogenated oils regardless of your total fat intake target.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333335" /></div>
         </div>

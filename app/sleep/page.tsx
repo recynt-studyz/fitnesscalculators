@@ -108,6 +108,52 @@ export default function SleepPage() {
               Sleep is not a single continuous state — it is a series of 90-minute cycles, each containing stages of light sleep, deep sleep, and REM sleep. Waking up mid-cycle (especially during deep sleep) triggers sleep inertia, that groggy feeling even after a full night of sleep. By timing your wake-up to the end of a complete cycle, you wake naturally during light sleep and feel more alert. Our sleep calculator calculates exactly when to go to bed or set your alarm to align with these natural sleep rhythms. All calculations run entirely in your browser — your data never leaves your device.
             </p>
           </div>
+          {/* Depth Content */}
+          <div className="space-y-8 mb-10">
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">How the Sleep Calculator Works</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>Sleep is not a single uniform state — it is a cyclical process consisting of repeating 90-minute stages. Each complete sleep cycle passes through four distinct phases:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>Stage N1 (light sleep):</strong> The transition from wakefulness; lasts 1–5 minutes; easily disrupted; muscle twitches (hypnic jerks) may occur</li>
+                  <li><strong>Stage N2 (consolidated light sleep):</strong> Heart rate slows, body temperature drops; sleep spindles and K-complexes appear in brain waves; memory consolidation begins; typically 10–25 minutes</li>
+                  <li><strong>Stage N3 (deep sleep / slow-wave sleep):</strong> The most restorative stage; growth hormone is released; tissue repair, immune function, and physical recovery occur; hardest to wake from; 20–40 minutes early in the night</li>
+                  <li><strong>REM (rapid eye movement) sleep:</strong> Vivid dreaming; emotional memory processing; brain activity resembles wakefulness; paralysis of major muscles prevents acting out dreams; longest periods occur in the final cycles of the night</li>
+                </ul>
+                <p>The <strong>sleep inertia</strong> problem: When an alarm forces you awake during deep sleep (N3), adenosine — a sleep pressure chemical — is still elevated in the brain, and you experience grogginess, impaired cognition, and reduced alertness for 15–60 minutes. This is sleep inertia. By contrast, waking at the end of a complete cycle (during the light N1/N2 stage) often feels natural and alert because the brain has already partially transitioned back toward wakefulness.</p>
+                <p>Our calculator works backward from your target wake time (or forward from your bedtime) in 90-minute increments, adding 14 minutes for average sleep onset time (the time it takes to fall asleep after getting into bed). This gives you bedtimes or wake times aligned with the natural end of a sleep cycle — the point where waking causes the least disruption.</p>
+                <p>Most adults need 5–6 complete cycles per night (7.5–9 hours). Our calculator highlights 5-cycle (7.5 hr) and 6-cycle (9 hr) options as the sweet spots for full recovery, while also showing 4-cycle (6 hr) for nights where sleep opportunity is limited.</p>
+              </div>
+            </div>
+
+            <div className="rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 px-6 py-5">
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Sleep Timing: Worked Example</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>James needs to wake at <strong>6:30 AM</strong>. Working backward in 90-minute cycles with 14 minutes for sleep onset:</p>
+                <ul className="list-disc list-inside space-y-1 pl-2">
+                  <li><strong>6 cycles (9 hours):</strong> Asleep by 9:30 PM &rarr; <strong>Bedtime: 9:16 PM</strong> — ideal if achievable; maximum restoration</li>
+                  <li><strong>5 cycles (7.5 hours):</strong> Asleep by 11:00 PM &rarr; <strong>Bedtime: 10:46 PM</strong> — recommended minimum for most adults</li>
+                  <li><strong>4 cycles (6 hours):</strong> Asleep by 12:30 AM &rarr; <strong>Bedtime: 12:16 AM</strong> — acceptable occasionally, not sustainable long-term</li>
+                </ul>
+                <p>Why is 7.5 hours (5 cycles) often better than 8 hours? Setting an alarm for 8 hours may wake James mid-cycle in deep sleep (N3), triggering sleep inertia and grogginess. Getting up after 7.5 hours — aligned to a cycle boundary — he wakes in light sleep and feels more alert despite technically less total sleep time. The cycle boundary matters as much as total duration.</p>
+                <p>Conversely, if James must go to bed at <strong>11:30 PM</strong> and works forward: add 14 min for onset (sleep at 11:44 PM), then 90-min cycles: optimal wake times are <strong>1:14 AM</strong> (2 cycles), <strong>2:44 AM</strong> (3 cycles), <strong>4:14 AM</strong> (4 cycles), <strong>5:44 AM</strong> (5 cycles), or <strong>7:14 AM</strong> (6 cycles).</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-bold text-gray-800 dark:text-white mb-3">Key Factors That Affect Sleep Quality and Timing</h2>
+              <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p><strong>Sleep cycle length variation:</strong> The 90-minute average varies between individuals and across the night. Earlier cycles tend to be shorter (80–90 min) with more deep sleep; later cycles run longer (90–110 min) with more REM. Our calculator uses 90 minutes as the standard approximation — if you consistently feel best at a slightly different wake time, trust your body&apos;s feedback over the formula.</p>
+                <p><strong>Age-related changes:</strong> Deep sleep (N3) decreases substantially with age. Adults over 60 typically get less slow-wave sleep and wake more frequently during the night. Sleep efficiency (the proportion of time in bed spent asleep) also declines with age. Older adults often benefit from slightly earlier bedtimes and may naturally wake earlier as circadian rhythms shift.</p>
+                <p><strong>Sleep debt:</strong> Accumulated sleep deprivation — even mild chronic short-sleeping — builds a sleep debt that cannot be fully repaid by a single long sleep session. Cognitive impairment from chronic sleep restriction persists even when subjective sleepiness normalizes. The most effective intervention is consistent adequate sleep duration for multiple nights.</p>
+                <p><strong>Circadian rhythm:</strong> Your internal biological clock regulates sleep-wake cycles with a natural period of approximately 24 hours, entrained by light exposure. Morning bright light suppresses melatonin and promotes wakefulness; evening light delays the circadian clock. Screen light in the 1–2 hours before bed can delay sleep onset by 30–90 minutes, reducing total sleep time for those with fixed morning wake obligations.</p>
+                <p><strong>REM rebound:</strong> When sleep is cut short — by an alarm, alcohol, or sleep apnea — REM sleep is preferentially lost because it concentrates in the final hours of sleep. REM is critical for emotional regulation and memory consolidation. After periods of REM deprivation, the brain compensates with longer, more intense REM on subsequent nights (REM rebound). This is why extended sleep after a week of short nights feels especially vivid and dreamful.</p>
+                <p><strong>Nap timing and duration:</strong> A 20-minute nap during early afternoon avoids deep sleep entirely and reduces grogginess; it can restore alertness for 2–3 hours. A 90-minute nap completes a full cycle and offers deeper restoration without impacting nighttime sleep. Naps taken after 3–4 PM or longer than 30 minutes (without completing a full cycle) increase sleep pressure disruption at bedtime.</p>
+                <p><strong>Sleep and fitness:</strong> Deep sleep is when the body releases the majority of its daily growth hormone output — essential for muscle protein synthesis, fat metabolism, and physical recovery. Inadequate sleep measurably reduces training adaptation, increases injury risk, impairs reaction time, and elevates cortisol, promoting fat storage and muscle breakdown. For athletes, sleep is as important a recovery tool as nutrition and rest days.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="pb-10"><FAQ questions={faqs} /></div>
           <div className="pb-6"><AdBanner slot="3333333345" /></div>
         </div>
